@@ -14,12 +14,12 @@ const StatsCard: React.FC<StatsCardProps> = ({
   value,
   label,
   iconBgColor = 'bg-blue-100',
-  width = 280,
-  height = 100,
+  width = 257.39,
+  height = 74.34,
 }) => {
   return (
     <div
-      className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
+      className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 flex items-center gap-4 hover:shadow-md transition-shadow w-[257.39px] h-[74.34px]"
       style={{
         width: `${width}px`,
         height: `${height}px`,
