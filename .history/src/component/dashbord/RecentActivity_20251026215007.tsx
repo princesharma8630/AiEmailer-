@@ -17,7 +17,7 @@ interface RecentActivityProps {
 
 const RecentActivity: React.FC<RecentActivityProps> = ({
   activities,
-  width = 1120,
+  width = 1100,
 }) => {
   const formatTimestamp = (timestamp: string) => {
     const date = new Date(timestamp);
@@ -35,7 +35,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
     <div
       className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
       style={{
-        maxWidth: `${width}px`,
+        width: `${width}px`,
       }}
     >
       {/* Header */}

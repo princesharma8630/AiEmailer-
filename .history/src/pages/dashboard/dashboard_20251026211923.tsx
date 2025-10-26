@@ -129,10 +129,10 @@ const Dashboard: React.FC = () => {
             </div>
 
             {/* Charts Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 ">
               {/* Status Overview */}
               {statusOverview && (
-                <div className="">
+                <div className="w-full overflow-x-auto">
                   <StatusOverview
                     data={{
                       opened: statusOverview.opened,
@@ -145,14 +145,14 @@ const Dashboard: React.FC = () => {
               )}
 
               {/* Activity Chart */}
-              <div className="">
+              <div className="w-full overflow-x-auto">
                 <ActivityChart data={activityData} />
               </div>
             </div>
           </div>
 
           {/* Recent Activity Section */}
-          <div className="">
+          <div className="w-full overflow-x-auto">
             <RecentActivity activities={recentActivity} />
           </div>
         </div>

@@ -35,7 +35,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
     <div
       className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
       style={{
-        maxWidth: `${width}px`,
+        width: `${width}px`,
       }}
     >
       {/* Header */}
@@ -97,7 +97,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
                       </a>
                     )}
                   </div>
-                  <div className="text-sm text-gray-500 mt-1">
+                  <div className="text-sm text-gray-500 ">
                     IP: {activity.ip}
                   </div>
                 </div>

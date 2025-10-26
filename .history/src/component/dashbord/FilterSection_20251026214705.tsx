@@ -76,7 +76,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               value={toDate}
               onChange={(e) => onToDateChange(e.target.value)}
               placeholder="dd/mm/yyyy"
-              className="h-[37px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
+              className="h-[37px] px-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
               style={{ width: '160px' }}
             />
            

@@ -152,7 +152,7 @@ const Dashboard: React.FC = () => {
           </div>
 
           {/* Recent Activity Section */}
-          <div className="">
+          <div className=" max-w-[523px] max-h-[324px]">
             <RecentActivity activities={recentActivity} />
           </div>
         </div>

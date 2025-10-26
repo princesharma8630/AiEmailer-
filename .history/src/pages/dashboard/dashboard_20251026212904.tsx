@@ -152,7 +152,7 @@ const Dashboard: React.FC = () => {
           </div>
 
           {/* Recent Activity Section */}
-          <div className="">
+          <div className="w-full overflow-x-auto">
             <RecentActivity activities={recentActivity} />
           </div>
         </div>

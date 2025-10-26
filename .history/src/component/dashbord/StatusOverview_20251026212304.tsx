@@ -17,7 +17,7 @@ interface StatusOverviewProps {
 const StatusOverview: React.FC<StatusOverviewProps> = ({
   data,
   width = 523,
-  height = 324,
+  height = 400,
 }) => {
   const { opened, clicked, notOpened, total } = data;
 
@@ -37,7 +37,7 @@ const StatusOverview: React.FC<StatusOverviewProps> = ({
 
   return (
     <div
-      className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 overflow-hidden"
+      className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
       style={{
         width: `${width}px`,
         minHeight: `${height}px`,

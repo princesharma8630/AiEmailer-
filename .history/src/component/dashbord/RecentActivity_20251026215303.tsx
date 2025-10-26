@@ -35,7 +35,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
     <div
       className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
       style={{
-        maxWidth: `${width}px`,
+        width: `${width}px`,
       }}
     >
       {/* Header */}
@@ -104,7 +104,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
               </div>
 
               {/* Right Section - Timestamp */}
-              <div className="flex items-center gap-2 text-sm text-gray-500 whitespace-nowrap ml-4">
+              <div className="flex items-center  text-sm text-gray-500 whitespace-nowrap ml-4">
                 <Clock size={16} />
                 {formatTimestamp(activity.timestamp)}
               </div>

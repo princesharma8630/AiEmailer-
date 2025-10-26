@@ -58,10 +58,13 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               value={fromDate}
               onChange={(e) => onFromDateChange(e.target.value)}
               placeholder="dd/mm/yyyy"
-              className="h-[37px] px-4  border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
+              className="h-[37px] px-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
               style={{ width: '160px' }}
             />
-          
+            {/* <Calendar
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+              size={20}
+            /> */}
           </div>
         </div>
 
@@ -76,10 +79,13 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               value={toDate}
               onChange={(e) => onToDateChange(e.target.value)}
               placeholder="dd/mm/yyyy"
-              className="h-[37px] px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
+              className="h-[37px] px-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
               style={{ width: '160px' }}
             />
-           
+            <Calendar
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+              size={20}
+            />
           </div>
         </div>
       </div>

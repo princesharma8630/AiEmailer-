@@ -37,7 +37,7 @@ const StatusOverview: React.FC<StatusOverviewProps> = ({
 
   return (
     <div
-      className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 overflow-hidden"
+      className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 over"
       style={{
         width: `${width}px`,
         minHeight: `${height}px`,

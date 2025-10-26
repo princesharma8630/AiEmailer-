@@ -35,7 +35,7 @@ const RecentActivity: React.FC<RecentActivityProps> = ({
     <div
       className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
       style={{
-        maxWidth: `${width}px`,
+        maxidth: `${width}px`,
       }}
     >
       {/* Header */}

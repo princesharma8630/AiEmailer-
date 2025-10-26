@@ -75,7 +75,7 @@ const ActivityChart: React.FC<ActivityChartProps> = ({
             iconType="circle"
             iconSize={10}
             wrapperStyle={{
-              paddingTop: '3px',
+              paddingTop: '50px',
               fontSize: '14px',
               color: '#6B7280',
             }}

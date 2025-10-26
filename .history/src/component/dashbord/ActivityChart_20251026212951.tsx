@@ -24,8 +24,8 @@ interface ActivityChartProps {
 
 const ActivityChart: React.FC<ActivityChartProps> = ({
   data,
-  width = 530,
-  height = 376,
+  width = 567,
+  height = 323,
 }) => {
   return (
     <div
@@ -41,7 +41,7 @@ const ActivityChart: React.FC<ActivityChartProps> = ({
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={310}>
+      <ResponsiveContainer width="100%" height={350}>
         <LineChart
           data={data}
           margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
@@ -75,7 +75,7 @@ const ActivityChart: React.FC<ActivityChartProps> = ({
             iconType="circle"
             iconSize={10}
             wrapperStyle={{
-              paddingTop: '3px',
+              paddingTop: '20px',
               fontSize: '14px',
               color: '#6B7280',
             }}
