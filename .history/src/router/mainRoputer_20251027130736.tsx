@@ -11,7 +11,6 @@ import Dashboard from "../pages/dashboard/dashboard";
 import MailAnalytics from "../pages/mailAnalytics/mailAnalytics";
 import HomePage from "../pages/home/home";
 import BulkEmail from "../pages/bulkEmail/bulkEmail";
-import ScheduleEmails from "../pages/scheduleEmails/ScheduleEmails";
 
 
 
@@ -36,7 +35,7 @@ function MainRouter() {
                <Route path={RouterConstant.Dashboard} element={<Dashboard/>} />
                <Route path={RouterConstant.MailAnalytices} element={<MailAnalytics/>} />
                <Route path={RouterConstant.BULK_EMAIL} element={<BulkEmail/>} />
-               <Route path={RouterConstant.SCHEDULE_EMAILS} element={<ScheduleEmails/>} />
+               <Route path={} element={<h1 className="p-6">Schedule Emails Content</h1>} />
                <Route path="/custom-emails" element={<h1 className="p-6">Custom Emails Content</h1>} />
                <Route path="/email-signatures" element={<h1 className="p-6">Email Signatures Content</h1>} />
                <Route path="/profile-settings" element={<h1 className="p-6">Profile Settings Content</h1>} />

@@ -3,14 +3,14 @@ import authReducer from './slices/authSlices/authslice'; // ✅ make sure this p
 import dashboardReducer from './slices/dashboardslices/dashboardSlice'
 import mailAnalytics from './slices/AnalysisSlice/mailAnalyticsSlice'
 import  bulkEmailReducer  from './slices/bulkEmailSlice/bulkEmailSlice';
-import scheduleEmailReducer from '../redux/slices/scheduleEmailSlice/scheduleEmailSlice'
+
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     dashboard:dashboardReducer,
     mailAnalytics:mailAnalytics,
     bulkEmailReducer: bulkEmailReducer,
-    scheduleEmail: scheduleEmailReducer
+    schedule
   },
 });
 
