@@ -13,7 +13,7 @@ type GeneratedContent = {
   originalLinksCount: number;
 };
 
-const useAppSelector = (_p0?: (state: any) => any) => ({
+const useAppSelector = (p0: (state: any) => any) => ({
   formData: { recipientEmail: '', emailBody: '', signatureId: null },
   signatures: [
     { id: '1', email: 'ashish@aibridze.com', name: 'Ashish Chauhan' },

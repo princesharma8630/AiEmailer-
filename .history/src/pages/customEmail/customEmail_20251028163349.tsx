@@ -7,13 +7,14 @@ import { ProviderCopyButtons } from '../../component/customEmail/ProviderCopyBut
 import { EmailPreview } from '../../component/customEmail/EmailPreview';
 
 // Mock hooks - replace with your actual Redux hooks
+const useAppDispatch = () => (action: any) => console.log(action);
 type GeneratedContent = {
   trackedHtml: string;
   trackingId: string;
   originalLinksCount: number;
 };
 
-const useAppSelector = (_p0?: (state: any) => any) => ({
+const useAppSelector = () => ({
   formData: { recipientEmail: '', emailBody: '', signatureId: null },
   signatures: [
     { id: '1', email: 'ashish@aibridze.com', name: 'Ashish Chauhan' },

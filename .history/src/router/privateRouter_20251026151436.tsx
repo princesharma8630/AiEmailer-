@@ -5,8 +5,7 @@ import type { RootState } from "../redux/store";
 import RouterConstant from "../constants/routerConstant";
 
 const PrivateRouter: React.FC = () => {
-  const auth = useSelector((state: RootState) => state.auth as any);
-  const { isLoggedIn, isInitialized } = auth;
+  const { isLoggedIn, isInitialized } = useSelector((state: RootState) => state.auth);
   const token = localStorage.getItem('token');
 
   // Show loading while checking auth status

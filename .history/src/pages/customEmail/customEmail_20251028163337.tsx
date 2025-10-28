@@ -7,13 +7,14 @@ import { ProviderCopyButtons } from '../../component/customEmail/ProviderCopyBut
 import { EmailPreview } from '../../component/customEmail/EmailPreview';
 
 // Mock hooks - replace with your actual Redux hooks
+const useAppDispatch = () => (action: any) => console.log(action);
 type GeneratedContent = {
   trackedHtml: string;
   trackingId: string;
   originalLinksCount: number;
 };
 
-const useAppSelector = (_p0?: (state: any) => any) => ({
+const useAppSelector = () => ({
   formData: { recipientEmail: '', emailBody: '', signatureId: null },
   signatures: [
     { id: '1', email: 'ashish@aibridze.com', name: 'Ashish Chauhan' },
@@ -42,7 +43,7 @@ export const CustomEmail: React.FC = () => {
     // dispatch(updateFormData({ emailBody: body }));
   };
 
-  const handleSignatureChange = () => {
+  const handleSignatureChange = (id: string | null) => {
     // dispatch(updateFormData({ signatureId: id }));
   };
 
@@ -54,7 +55,7 @@ export const CustomEmail: React.FC = () => {
     // dispatch(resetForm());
   };
 
-  const handleCopy = (_providerId: string, content: string) => {
+  const handleCopy = (providerId: string, content: string) => {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = content;
     tempDiv.style.position = 'absolute';
