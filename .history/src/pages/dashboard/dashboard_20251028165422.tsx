@@ -16,7 +16,7 @@ import {
 import type { RootState, AppDispatch } from '../../redux/store';
 import RouterConstant from '../../constants/routerConstant';
 import { useNavigate } from 'react-router-dom';
-
+const navigate = useNavigate
 
 const Dashboard: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -25,7 +25,6 @@ const Dashboard: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
-  const navigate = useNavigate();
 
   // Get data from Redux store
   const {
@@ -77,7 +76,7 @@ const Dashboard: React.FC = () => {
               <p className="text-sm sm:text-base text-gray-600">Manage and track your email campaigns.</p>
             </div>
             <button
-              onClick={()=>{navigate(RouterConstant.CUSTOM_EMAILS)}}
+              onClick={()=>{navigate(RouterConstant.CUSTOM_EMAILS}}
               className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto justify-center"
             >
               <Plus className="w-4 h-4 sm:w-5 sm:h-5" />

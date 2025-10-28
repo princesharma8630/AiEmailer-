@@ -17,16 +17,15 @@ import type { RootState, AppDispatch } from '../../redux/store';
 import RouterConstant from '../../constants/routerConstant';
 import { useNavigate } from 'react-router-dom';
 
-
+const Dashboard: React.FC = () => {
 const Dashboard: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  
+  const navigate = useNavigate();
+
   // Local state for filters
   const [searchValue, setSearchValue] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
-  const navigate = useNavigate();
-
   // Get data from Redux store
   const {
     stats,

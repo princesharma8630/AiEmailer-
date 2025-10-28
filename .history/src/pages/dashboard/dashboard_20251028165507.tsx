@@ -16,7 +16,7 @@ import {
 import type { RootState, AppDispatch } from '../../redux/store';
 import RouterConstant from '../../constants/routerConstant';
 import { useNavigate } from 'react-router-dom';
-
+const navigate = useNavigate()
 
 const Dashboard: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -25,7 +25,6 @@ const Dashboard: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
-  const navigate = useNavigate();
 
   // Get data from Redux store
   const {

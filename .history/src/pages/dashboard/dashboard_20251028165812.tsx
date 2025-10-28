@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate();n
 
   // Get data from Redux store
   const {
