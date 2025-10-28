@@ -53,6 +53,7 @@ export const mockSignupAPI = async (userData: SignupData): Promise<SignupRespons
       name: userData.name,
       email: userData.email,
       organizationName: userData.organizationName,
+      password: userData.password, // In real app, this should be hashed
       isVerified: false,
       createdAt: new Date().toISOString(),
     };
@@ -72,7 +73,16 @@ export const mockSignupAPI = async (userData: SignupData): Promise<SignupRespons
     localStorage.setItem('tempToken', tempToken);
 
     return {
+      success: true,
       message: 'Signup successful. OTP sent to your email.',
+      email: userData.email,
+      tempToken,
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        organizationName: user.organizationName,
+      },
     };
   } catch (error: any) {
     throw new Error(error.message || 'Signup failed');
@@ -98,9 +108,8 @@ export const mockVerifyOTPAPI = async (otpData: VerifyOTPData): Promise<VerifyOT
       throw new Error('OTP expired or not found');
     }
 
-    // Verify OTP (check both 'otp' and 'code' properties)
-    const otpCode = (otpData as any).otp || otpData.code;
-    if (storedOTP !== otpCode) {
+    // Verify OTP
+    if (storedOTP !== otpData.otp) {
       throw new Error('Invalid OTP');
     }
 
@@ -119,7 +128,16 @@ export const mockVerifyOTPAPI = async (otpData: VerifyOTPData): Promise<VerifyOT
     console.log('✅ OTP Verified successfully for', otpData.email);
 
     return {
+      success: true,
       message: 'OTP verified successfully',
+      token,
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        organizationName: user.organizationName,
+        isVerified: user.isVerified,
+      },
     };
   } catch (error: any) {
     throw new Error(error.message || 'OTP verification failed');
@@ -152,6 +170,7 @@ export const mockResendOTPAPI = async (resendData: ResendOTPData): Promise<Resen
     console.log('🔐 New Mock OTP for', resendData.email, ':', otp);
 
     return {
+      success: true,
       message: 'OTP resent successfully',
     };
   } catch (error: any) {
@@ -173,10 +192,9 @@ export const mockLoginAPI = async (loginData: LoginData): Promise<LoginResponse>
     }
 
     // Check password (in real app, use bcrypt.compare)
-    // For mock, we'll skip password check or use a default
-    // if (user.password !== loginData.password) {
-    //   throw new Error('Invalid email or password');
-    // }
+    if (user.password !== loginData.password) {
+      throw new Error('Invalid email or password');
+    }
 
     // Check if verified
     if (!user.isVerified) {
@@ -190,18 +208,14 @@ export const mockLoginAPI = async (loginData: LoginData): Promise<LoginResponse>
     console.log('✅ Login successful for', loginData.email);
 
     return {
-      data: {
-        access_token: token,
-        token_type: 'Bearer',
-      },
-      access_token: token,
-      token_type: 'Bearer',
+      success: true,
+      message: 'Login successful',
+      token,
       user: {
-        id: parseInt(user.id.split('_')[1]),
+        id: user.id,
         name: user.name,
         email: user.email,
-        organization: user.organizationName,
-        role: 'user',
+        organizationName: user.organizationName,
       },
     };
   } catch (error: any) {
@@ -230,11 +244,12 @@ export const mockGetCurrentUserAPI = async (): Promise<any> => {
     }
 
     return {
+      success: true,
       user: {
-        id: parseInt(user.id.split('_')[1]),
+        id: user.id,
         name: user.name,
         email: user.email,
-        organization: user.organizationName,
+        organizationName: user.organizationName,
         isVerified: user.isVerified,
       },
     };
