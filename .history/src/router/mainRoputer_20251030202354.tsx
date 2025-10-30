@@ -30,7 +30,7 @@ function MainRouter() {
                <Route path={RouterConstant.SignUp} element={<SignupPage/>} />
                <Route path={RouterConstant.Otp} element={<OTPPage/>}/>
                <Route path={RouterConstant.Login} element={<LoginPage/>}/>
-               <Route path={RouterConstant.PasswordPage} element={<CreatePasswordPage/>}/>
+               <route path={RouterConstant.PasswordPage} element={CreatePasswordPage}/>
             </Route>
          </Route>
 

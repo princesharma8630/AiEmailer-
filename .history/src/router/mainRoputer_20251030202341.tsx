@@ -14,7 +14,6 @@ import BulkEmail from "../pages/bulkEmail/bulkEmail";
 import ScheduleEmails from "../pages/scheduleEmails/ScheduleEmails";
 import { CustomEmail } from "../pages/customEmail/customEmail";
 import { EmailSignatures } from "../pages/emailSignature/EmailSignature";
-import CreatePasswordPage from "../pages/signup/createpassward";
 
 
 
@@ -30,7 +29,7 @@ function MainRouter() {
                <Route path={RouterConstant.SignUp} element={<SignupPage/>} />
                <Route path={RouterConstant.Otp} element={<OTPPage/>}/>
                <Route path={RouterConstant.Login} element={<LoginPage/>}/>
-               <Route path={RouterConstant.PasswordPage} element={<CreatePasswordPage/>}/>
+               <route path={RouterConstant.PasswordPage} element
             </Route>
          </Route>
 
